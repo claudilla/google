@@ -10,7 +10,7 @@
   </Content>
   <Content type="html" view="canvas">
     <![CDATA[
-      Hello, big world,TESTING DUHH!
+      Hello, big world ,TESTING DUHH!
     ]]>
   </Content>
 </Module>
