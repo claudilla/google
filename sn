@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<Module>
-    <ModulePrefs title="hello world example" /> 
-    <Content type="html">
-       <![CDATA[ 
-       <iframe id="knowledge_iframe" style="width:100%;border:0;" scrolling="no"/>
-         function() { var c = this; var frame_src = "https://claudiademo.service-now.com/sp", frame_id = "knowledge_iframe", frame_el = document.getElementById('knowledge_iframe'),frame_win; // BEFORE you set the iframe src, apply an onload function to the iframe element frame_el.onload = function() { // Onload, you can access the frame's contents and do whatever you want frame_win = frame_el.contentDocument; var x = document.getElementById("knowledge_iframe"); var y = x.contentWindow.document; y.body.style.backgroundColor = "blue"; console.log("y.body.scrollHeight ", y.body.scrollHeight); document.getElementById("knowledge_iframe").style.height = y.body.scrollHeight + "px"; } frame_el.src = frame_src; }
 
-       ]]>
-    </Content> 
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Preferences for __UP_myname__" height="400"/>
+   <Content type="html"><![CDATA[
+   <div id="content_div"> <iframe id="knowledge_iframe" style="width:100%;border:0;" scrolling="no"/></div>
+   <script type="text/javascript">
+   // client script
+   function() { var c = this; var frame_src = "https://claudiademo.service-now.com/sp", frame_id = "knowledge_iframe", frame_el = document.getElementById('knowledge_iframe'),frame_win; // BEFORE you set the iframe src, apply an onload function to the iframe element frame_el.onload = function() { // Onload, you can access the frame's contents and do whatever you want frame_win = frame_el.contentDocument; var x = document.getElementById("knowledge_iframe"); var y = x.contentWindow.document; y.body.style.backgroundColor = "blue"; console.log("y.body.scrollHeight ", y.body.scrollHeight); document.getElementById("knowledge_iframe").style.height = y.body.scrollHeight + "px"; } frame_el.src = frame_src; }
+   </script>
+   ]]>
+  </Content>
 </Module>
