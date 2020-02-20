@@ -12,7 +12,7 @@
     var x = document.getElementById("knowledge_iframe"); 
     var y = x.contentWindow.document; y.body.style.backgroundColor = "blue"; 
     console.log("y.body.scrollHeight ", y.body.scrollHeight); 
-    document.getElementById("knowledge_iframe").style.height = y.body.scrollHeight + "px"; 
+    document.getElementById("knowledge_iframe").style.height = 400 + "px"; 
 } 
 frame_el.src = frame_src; 
 }
